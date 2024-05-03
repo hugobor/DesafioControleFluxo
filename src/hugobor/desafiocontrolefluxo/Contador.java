@@ -32,7 +32,7 @@ public class Contador {
 	var out = System.out;
 	var err = System.err;
 	
-	int start =0;
+	int start = 0;
 	int end = 0;
 	
 	// Loop para garantir a leitura correta
