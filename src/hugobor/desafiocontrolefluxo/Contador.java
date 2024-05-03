@@ -35,9 +35,11 @@ public class Contador {
 	int start = 0;
 	int end = 0;
 	
+	
 	// Loop para garantir a leitura correta
 	boolean readingSuccefull = false;
 	do {
+	    
 	    try (var reader = new Scanner(System.in)) {
 		reader.useLocale(Locale.of("en", "US"));
 
@@ -52,7 +54,9 @@ public class Contador {
 		err.println("Digite os valores corretamente por favor…");
 		readingSuccefull = false;
 	    }
+	    
 	} while (!readingSuccefull);
+	
 	
 	try {
 	    count(start, end);
@@ -66,7 +70,6 @@ public class Contador {
 	if (start > end) {
 	    throw new InvalidParameters();
 	}
-	
 	
 	var out = System.out;
 	
