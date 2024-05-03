@@ -38,20 +38,20 @@ public class Contador {
 	// Loop para garantir a leitura correta
 	boolean readingSuccefull = false;
 	do {
-        	try (var reader = new Scanner(System.in)) {
-        	    reader.useLocale(Locale.of("en", "US"));
-        	    	
-        	    out.print("Digite o primeiro parâmetro: ");
-        	    start = reader.nextInt();
-        	    
-        	    out.print("Digite o segundo parâmetro: ");
-        	    end = reader.nextInt();
-        	    
-        	    readingSuccefull = true;
-        	} catch (Exception ignore) {
-        	    err.println("Digite os valores corretamente por favor…");
-        	    readingSuccefull = false;
-        	}
+	    try (var reader = new Scanner(System.in)) {
+		reader.useLocale(Locale.of("en", "US"));
+
+		out.print("Digite o primeiro parâmetro: ");
+		start = reader.nextInt();
+
+		out.print("Digite o segundo parâmetro: ");
+		end = reader.nextInt();
+
+		readingSuccefull = true;
+	    } catch (Exception ignore) {
+		err.println("Digite os valores corretamente por favor…");
+		readingSuccefull = false;
+	    }
 	} while (!readingSuccefull);
 	
 	try {
